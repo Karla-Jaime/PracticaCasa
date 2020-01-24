@@ -14,12 +14,29 @@ using namespace std;
 
 
 void dibujarLineas(){
-	glBegin(GL_LINES);
-	glColor3f(0.2f, 0.1f, 0.1f);
+	glBegin(GL_LINE_STRIP);
+	glColor3f(0.17f, 0.38f, 0.21f);
+
+	glVertex3f(-0.5f, -0.6f, 0.0f);
+	glVertex3f(-0.4f, -0.7f, 0.0f);
+	glVertex3f(-0.3f, -0.6f, 0.0f);
+	glEnd();
+}
+void extra() {
+	glBegin(GL_LINE_STRIP);
+	glColor3f(0.17f, 0.38f, 0.21f);
+
+	glVertex3f(0.5f, -0.6f, 0.0f);
+	glVertex3f(0.4f, -0.7f, 0.0f);
+	glVertex3f(0.3f, -0.6f, 0.0f);
+	glEnd();
+}
+void ventana() {
+	glBegin(GL_LINE);
+	glColor3f(0.3f, 0.1f, 0.06f);
+
 	glVertex3f(0.0f, 0.0f, 0.0f);
-	glVertex3f(0.2f, -0.1f, 0.0f);
-	glVertex3f(-0.3f, 0.1f, 0.0f);
-	glVertex3f(-0.3f, -0.1f, 0.0f);
+	
 	glEnd();
 }
 void dibujarTriangulos() {
@@ -37,7 +54,40 @@ void dibujarTriangulos() {
 	glVertex3f(0.4f, -0.4f, 0.0f);
 	glVertex3f(-0.4f, 0.4f, 0.0f);
 	glVertex3f(-0.4f, -0.4f, 0.0f);
-	
+	///
+	glColor3f(0.46f, 0.13f, 0.06f);
+
+	glVertex3f(0.0f,0.8f,0.0f);
+	glVertex3f(-0.5f, 0.3f, 0.0f);
+	glVertex3f(0.5f, 0.3f, 0.0f);
+	////
+	glColor3f(0.3f,0.1f,0.06f);
+	glVertex3f(-0.2f,-0.1f,0.0f);
+	glVertex3f(0.2f, -0.1f, 0.0f);
+	glVertex3f(-0.2f, -0.4f, 0.0f);
+
+	glVertex3f(0.2f,-0.4f,0.0f);
+	glVertex3f(-0.2f, -0.4f, 0.0f);
+	glVertex3f(0.2f, -0.1f, 0.0f);
+	////
+	glColor3f(0.62f, 0.87f, 0.91f);
+
+	glVertex3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(0.0f, 0.2f, 0.0f);
+	glVertex3f(0.3f, 0.2f, 0.0f);
+
+	glVertex3f(0.3f, 0.0f, 0.0f);
+	glVertex3f(0.3f, 0.2f, 0.0f);
+	glVertex3f(0.0f, 0.0f, 0.0f);	
+	////
+	glColor3f(0.3f, 0.1f, 0.06f);
+	glVertex3f(-0.8f, -0.5f, 0.0f);
+	glVertex3f(-0.7f, -0.5f, 0.0f);
+	glVertex3f(-0.8f, 0.2f, 0.0f);
+
+	glVertex3f(-0.7f, -0.5f, 0.0f);
+	glVertex3f(-0.8f, 0.2f, 0.0f);
+	glVertex3f(-0.7f, 0.2f, 0.0f);
 	//Especificamos que dejaremos de dibujar 
 	glEnd();
 }
@@ -53,42 +103,16 @@ void cesped() {
 	glVertex3f(1.0f, -1.0f, 0.0f);
 	glVertex3f(1.0f, -0.4f, 0.0f);
 	glVertex3f(-1.0f, -1.0f, 0.0f);
-
 	glEnd();
 }
-void dibujarTrianContinuo() {
-	glBegin(GL_TRIANGLE_STRIP);
-	glColor3f(1.0f,1.0f,1.0f);
 
-	glVertex3f(0.0f,0.0f,0.0f);
-	glVertex3f(0.1f, 0.1f, 0.0f);
-	glVertex3f(0.2f, 0.0f, 0.0f);
-
-	glColor3f(0.2f, 0.8f, 1.0f);
-
-	glVertex3f(0.0f, 0.15f, 0.0f);
-
-	glEnd();
-}
-void poligonos() {
-	glBegin(GL_POLYGON);
-	//Necesita por lo menos 3v
-	glColor3f(1.0f, 0.4f, 0.4f);
-
-	glVertex3f(0.0f,0.0f,0.0f);
-	glVertex3f(0.0f, 0.5f, 0.0f);
-	glVertex3f(0.2f, 0.3f, 0.0f);
-		
-	glVertex3f(0.2f, -0.4f, 0.0f);
-	glVertex3f(0.4f, -0.6f, 0.0f);
-
-	glEnd();
-}
 
 void dibujar() {
 	cesped();
 	dibujarTriangulos();
-	//poligonos();
+	dibujarLineas();
+	extra();
+	//ventana();
 }
 //$(ProjectDir)include 
 int main()
