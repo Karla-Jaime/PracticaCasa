@@ -32,11 +32,27 @@ void extra() {
 	glEnd();
 }
 void ventana() {
-	glBegin(GL_LINE);
-	glColor3f(0.3f, 0.1f, 0.06f);
+	glBegin(GL_LINES);
+
+	glColor3f(0.16f, 0.08f, 0.03f);
 
 	glVertex3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(0.3f, 0.0f, 0.0f);
+
+	glVertex3f(0.0f, 0.0f, 0.0f);
+	glVertex3f(0.0f, 0.2f,0.0f);
+
+	glVertex3f(0.0f, 0.2f, 0.0f);
+	glVertex3f(0.3f, 0.2f, 0.0f);
 	
+	glVertex3f(0.3f, 0.2f, 0.0f);
+	glVertex3f(0.3f,0.0f,0.0f);
+
+	glVertex3f(0.15f,0.0f,0.0f);
+	glVertex3f(0.15f, 0.2f, 0.0f);
+
+	glVertex3f(0.0f, 0.1f, 0.0f);
+	glVertex3f(0.3f, 0.1f, 0.0f);
 	glEnd();
 }
 void dibujarTriangulos() {
@@ -61,7 +77,8 @@ void dibujarTriangulos() {
 	glVertex3f(-0.5f, 0.3f, 0.0f);
 	glVertex3f(0.5f, 0.3f, 0.0f);
 	////
-	glColor3f(0.3f,0.1f,0.06f);
+	glColor3f(0.59f,0.51f,0.49f);
+
 	glVertex3f(-0.2f,-0.1f,0.0f);
 	glVertex3f(0.2f, -0.1f, 0.0f);
 	glVertex3f(-0.2f, -0.4f, 0.0f);
@@ -69,8 +86,9 @@ void dibujarTriangulos() {
 	glVertex3f(0.2f,-0.4f,0.0f);
 	glVertex3f(-0.2f, -0.4f, 0.0f);
 	glVertex3f(0.2f, -0.1f, 0.0f);
-	////
-	glColor3f(0.62f, 0.87f, 0.91f);
+	
+	//// Ventana
+	glColor3f(0.61f, 0.93f, 0.99f);
 
 	glVertex3f(0.0f, 0.0f, 0.0f);
 	glVertex3f(0.0f, 0.2f, 0.0f);
@@ -78,7 +96,9 @@ void dibujarTriangulos() {
 
 	glVertex3f(0.3f, 0.0f, 0.0f);
 	glVertex3f(0.3f, 0.2f, 0.0f);
-	glVertex3f(0.0f, 0.0f, 0.0f);	
+	glVertex3f(0.0f, 0.0f, 0.0f);
+
+
 	////
 	glColor3f(0.3f, 0.1f, 0.06f);
 	glVertex3f(-0.8f, -0.5f, 0.0f);
@@ -105,14 +125,23 @@ void cesped() {
 	glVertex3f(-1.0f, -1.0f, 0.0f);
 	glEnd();
 }
-
+void circulos() {
+	glBegin(GL_POLYGON);
+	glColor3f(0.88f,0.78f,0.13f);
+	for (double i = 0; i < 360.0; i += 5.0) {
+		glVertex3f(
+			(0.2 * cos(i * 3.14159 / 180.0)) - 0.7, (0.2 * sin(i * 3.14159 / 180.0)) + 0.7, 0.0f);
+	}
+	glEnd();
+}
 
 void dibujar() {
 	cesped();
 	dibujarTriangulos();
 	dibujarLineas();
 	extra();
-	//ventana();
+	ventana();
+	circulos();
 }
 //$(ProjectDir)include 
 int main()
