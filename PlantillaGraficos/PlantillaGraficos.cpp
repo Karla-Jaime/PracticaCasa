@@ -253,6 +253,24 @@ void nuveDosDos() {
 	}glEnd();
 }
 
+void nuveTres() {
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 8.0) {
+		glVertex3f(
+			(0.18 * cos(i * 3.14159 / 180.0)) + 0.65, (0.1 * sin(i * 3.14159 / 180.0)) + 0.5, 0.0f);
+	}
+	glEnd();
+}
+void nuveTresDos() {
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 7.0) {
+		glVertex3f(
+			(0.15 * cos(i * 3.14159 / 180.0)) + 0.7, (0.1 * sin(i * 3.14159 / 180.0)) + 0.55, 0.0f);
+	}glEnd();
+}
+
 
 void dibujar() {
 	cesped();
@@ -264,6 +282,7 @@ void dibujar() {
 	Arbol(); arbol2(); arbol3();
 	nuveUno(); nuveUnoDos();
 	nuveDos(); nuveDosDos();
+	nuveTres(); nuveTresDos();
 }
 //$(ProjectDir)include 
 int main()
