@@ -33,7 +33,7 @@ void extra() {
 }
 void ventana() {
 	glBegin(GL_LINES);
-
+	//Ventana marco
 	glColor3f(0.16f, 0.08f, 0.03f);
 
 	glVertex3f(0.0f, 0.0f, 0.0f);
@@ -47,12 +47,56 @@ void ventana() {
 	
 	glVertex3f(0.3f, 0.2f, 0.0f);
 	glVertex3f(0.3f,0.0f,0.0f);
-
+	//Ventana
 	glVertex3f(0.15f,0.0f,0.0f);
 	glVertex3f(0.15f, 0.2f, 0.0f);
 
 	glVertex3f(0.0f, 0.1f, 0.0f);
 	glVertex3f(0.3f, 0.1f, 0.0f);
+	//Rayos del Sol
+	glColor3f(0.88f, 0.78f, 0.13f);
+	glVertex3f(-0.5f,0.8f,0.0f);
+	glVertex3f(-0.4f, 0.85f, 0.0f);
+	
+	glVertex3f(-0.5f, 0.9f, 0.0f);
+	glVertex3f(-0.55f, 0.85f, 0.0f);
+	
+	glVertex3f(-0.48f, 0.7f, 0.0f);
+	glVertex3f(-0.4f, 0.7f, 0.0f);
+
+	glVertex3f(-0.5f, 0.6f, 0.0f);
+	glVertex3f(-0.4f, 0.55f, 0.0f);
+
+	glVertex3f(-0.55f,0.55f,0.0f);
+	glVertex3f(-0.48f,0.45f,0.0f);
+
+	glVertex3f(-0.6f, 0.48f, 0.0f);
+	glVertex3f(-0.55f, 0.4f, 0.0f);
+
+	glVertex3f(-0.7f, 0.48f, 0.0f);
+	glVertex3f(-0.7f, 0.37f, 0.0f);
+
+	glVertex3f(-0.8f, 0.5f, 0.0f);
+	glVertex3f(-0.85f, 0.42f, 0.0f);
+
+	glVertex3f(-0.88f, 0.55f, 0.0f);
+	glVertex3f(-0.95f, 0.45f, 0.0f);
+
+	glVertex3f(-0.9f, 0.6f, 0.0f);
+	glVertex3f(-0.95f, 0.58f, 0.0f);
+
+	glVertex3f(-1.0f, 0.7f, 0.0f);
+	glVertex3f(-0.92f, 0.7f, 0.0f);
+
+	glVertex3f(-0.9f, 0.78f, 0.0f);
+	glVertex3f(-0.98f, 0.82f, 0.0f);
+
+	glVertex3f(-0.88f, 0.82f, 0.0f);
+	glVertex3f(-0.94f, 0.88f, 0.0f);
+
+	glVertex3f(-0.82f, 0.88f, 0.0f);
+	glVertex3f(-0.9f, 0.94f, 0.0f);
+
 	glEnd();
 }
 void dibujarTriangulos() {
