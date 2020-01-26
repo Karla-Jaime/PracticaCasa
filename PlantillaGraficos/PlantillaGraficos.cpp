@@ -97,6 +97,15 @@ void ventana() {
 	glVertex3f(-0.82f, 0.88f, 0.0f);
 	glVertex3f(-0.9f, 0.94f, 0.0f);
 
+	glVertex3f(-0.76f, 0.90f, 0.0f);
+	glVertex3f(-0.82f, 0.96f, 0.0f);
+
+	glVertex3f(-0.7f, 0.92f, 0.0f);
+	glVertex3f(-0.7f, 0.98f, 0.0f);
+
+	glVertex3f(-0.62f, 0.90f, 0.0f);
+	glVertex3f(-0.58f, 0.98f, 0.0f);
+
 	glEnd();
 }
 void dibujarTriangulos() {
@@ -178,6 +187,72 @@ void circulos() {
 	}
 	glEnd();
 }
+void Arbol() {
+	glBegin(GL_POLYGON);
+	glColor3f(0.01f, 0.25f, 0.04f);
+	for (double i = 0; i < 360.0; i += 6.0) {
+		glVertex3f(
+			(0.2 * cos(i * 3.14159 / 180.0)) - 0.75, (0.15 * sin(i * 3.14159 / 180.0)) + 0.0, 0.0f);
+	}
+	glEnd();
+}
+void arbol2() {
+	glBegin(GL_POLYGON);
+	glColor3f(0.01f, 0.25f, 0.04f);
+	for (double i = 0; i < 360.0; i += 8.0) {
+		glVertex3f(
+			(0.2 * cos(i * 3.14159 / 180.0)) - 0.65, (0.15 * sin(i * 3.14159 / 180.0)) + 0.1, 0.0f);
+	}
+	glEnd();
+}
+void arbol3(){
+	glBegin(GL_POLYGON);
+	glColor3f(0.01f, 0.25f, 0.04f);
+	for (double i = 0; i < 360.0; i += 6.0) {
+		glVertex3f(
+			(0.2 * cos(i * 3.14159 / 180.0)) - 0.75, (0.15 * sin(i * 3.14159 / 180.0)) + 0.2, 0.0f);
+	}
+	glEnd();
+}
+
+void nuveUno() {
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 8.0) {
+		glVertex3f(
+			(0.08 * cos(i * 3.14159 / 180.0)) - 0.25, (0.065 * sin(i * 3.14159 / 180.0)) + 0.65, 0.0f);
+	}
+	glEnd();
+}
+
+void nuveUnoDos() {
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 7.0) {
+		glVertex3f(
+			(0.08 * cos(i * 3.14159 / 180.0)) - 0.35, (0.065 * sin(i * 3.14159 / 180.0)) + 0.6, 0.0f);
+	}glEnd();
+
+	}
+
+void nuveDos() {
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 8.0) {
+		glVertex3f(
+			(0.15 * cos(i * 3.14159 / 180.0)) + 0.3, (0.1 * sin(i * 3.14159 / 180.0)) + 0.7, 0.0f);
+	}
+	glEnd();
+}
+void nuveDosDos() {
+	glBegin(GL_POLYGON);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	for (double i = 0; i < 360.0; i += 7.0) {
+		glVertex3f(
+			(0.1 * cos(i * 3.14159 / 180.0)) + 0.35, (0.08 * sin(i * 3.14159 / 180.0)) + 0.8, 0.0f);
+	}glEnd();
+}
+
 
 void dibujar() {
 	cesped();
@@ -186,6 +261,9 @@ void dibujar() {
 	extra();
 	ventana();
 	circulos();
+	Arbol(); arbol2(); arbol3();
+	nuveUno(); nuveUnoDos();
+	nuveDos(); nuveDosDos();
 }
 //$(ProjectDir)include 
 int main()
