@@ -240,7 +240,7 @@ void nuveDos() {
 	glColor3f(1.0f, 1.0f, 1.0f);
 	for (double i = 0; i < 360.0; i += 8.0) {
 		glVertex3f(
-			(0.15 * cos(i * 3.14159 / 180.0)) + 0.3, (0.1 * sin(i * 3.14159 / 180.0)) + 0.7, 0.0f);
+			(0.18 * cos(i * 3.14159 / 180.0)) + 0.3, (0.1 * sin(i * 3.14159 / 180.0)) + 0.7, 0.0f);
 	}
 	glEnd();
 }
@@ -249,7 +249,7 @@ void nuveDosDos() {
 	glColor3f(1.0f, 1.0f, 1.0f);
 	for (double i = 0; i < 360.0; i += 7.0) {
 		glVertex3f(
-			(0.1 * cos(i * 3.14159 / 180.0)) + 0.35, (0.08 * sin(i * 3.14159 / 180.0)) + 0.8, 0.0f);
+			(0.15 * cos(i * 3.14159 / 180.0)) + 0.4, (0.1 * sin(i * 3.14159 / 180.0)) + 0.8, 0.0f);
 	}glEnd();
 }
 
@@ -267,10 +267,17 @@ void nuveTresDos() {
 	glColor3f(1.0f, 1.0f, 1.0f);
 	for (double i = 0; i < 360.0; i += 7.0) {
 		glVertex3f(
-			(0.15 * cos(i * 3.14159 / 180.0)) + 0.7, (0.1 * sin(i * 3.14159 / 180.0)) + 0.55, 0.0f); 
+			(0.15 * cos(i * 3.14159 / 180.0)) + 0.75, (0.1 * sin(i * 3.14159 / 180.0)) + 0.55, 0.0f); 
 	}glEnd();
 }
-
+void CirculoPuerta() {
+	glBegin(GL_POLYGON);
+	glColor3f(0.68f, 0.64f, 0.26f);
+	for (double i = 0; i < 360.0; i += 7.0) {
+		glVertex3f(
+			(0.04 * cos(i * 3.14159 / 180.0)) + 0.1, (0.04 * sin(i * 3.14159 / 180.0)) -0.25, 0.0f);
+	}glEnd();
+}
 
 void dibujar() {
 	cesped();
@@ -283,6 +290,7 @@ void dibujar() {
 	nuveUno(); nuveUnoDos();
 	nuveDos(); nuveDosDos();
 	nuveTres(); nuveTresDos();
+	CirculoPuerta();
 }
 //$(ProjectDir)include 
 int main()
